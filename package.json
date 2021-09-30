@@ -1,6 +1,6 @@
 {
   "name": "wpxpost",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "pull articles from an RSS feed, pull details from post page, create excerpt post and upload to wordpress",
   "main": "lib/wpxpost.js",
   "scripts": {
