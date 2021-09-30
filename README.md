@@ -12,6 +12,18 @@ cross-posting script for RSS to a wordpress installation
    4) link to original content
    5) specified categories and tags
 
+## installation
+you can either clone this repository, or use **wpxpost** as a module 
+in your nodejs script by using npm or yarn to add it to your project
+
+``
+npm i --save wpxpost
+``
+or
+`
+yarn add wpxpost
+`
+
 ## usage
 
 ```
