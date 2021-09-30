@@ -2,9 +2,9 @@ const fs = require('fs')
 const configFile = fs.existsSync('.env.dev') ? '.env.dev' : '.env'
 require('dotenv').config({path: configFile})
 
-const xpost = require('./lib/xpost')
+const wpxpost = require('./lib/wpxpost')
 
-xpost.go({
+wpxpost.go({
     endpoint: process.env.WP_ENDPOINT,
     username: process.env.WP_USERNAME,
     password: process.env.WP_PASSWORD,

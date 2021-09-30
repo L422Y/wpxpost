@@ -1,4 +1,4 @@
-# xpost
+# wpxpost
 
 cross-posting script for RSS to a wordpress installation
 
@@ -15,7 +15,7 @@ cross-posting script for RSS to a wordpress installation
 ## usage
 
 ```
-xpost.go({
+wpxpost.go({
     endpoint: <destination wordpress wp-json endpoint url>,
     username: <destination wordpress username>,
     password: <destination wordpress password>,
@@ -44,13 +44,13 @@ const {stripExtras} = require('./lib/utils.js')
 
 then we can change how we get the post details
 ```
-xpost.getArticle = async (url) => {
+wpxpost.getArticle = async (url) => {
     return await axios.get(url).then((response) => {
         const dom = new JSDOM(response.data)
         const title = dom.window.document.querySelector('title').textContent
-        const heroImage = dom.window.document.querySelector(xpost.opts.featuredImageSelector).src
-        const body = stripExtras(dom.window.document.querySelector(xpost.opts.postBodySelector).innerHTML)
-        const trimmedBody = body.split(' ').slice(0, xpost.opts.excerptWordCount).join(' ').replace(/,$/, '') + '...'
+        const heroImage = dom.window.document.querySelector(wpxpost.opts.featuredImageSelector).src
+        const body = stripExtras(dom.window.document.querySelector(wpxpost.opts.postBodySelector).innerHTML)
+        const trimmedBody = body.split(' ').slice(0, wpxpost.opts.excerptWordCount).join(' ').replace(/,$/, '') + '...'
         return {
             title,
             heroImage,
@@ -61,7 +61,7 @@ xpost.getArticle = async (url) => {
 ```
 ...or change how we build the post content
 ```
-xpost.createBody = async (info) => {
+wpxpost.createBody = async (info) => {
     const body =
         `<div class="excerpt">${info['body']}</div><br>` +
         `<div class="bottomdesc">${info['description']}</div></div>` +
