@@ -1,5 +1,5 @@
 node_modules/
 .idea/
-images/*
+images/*.jpg
 .env.dev
 package-lock.json
