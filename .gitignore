@@ -1,0 +1,5 @@
+node_modules/
+.idea/
+images/*
+.env.dev
+package-lock.json

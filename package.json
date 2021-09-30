@@ -1,0 +1,20 @@
+{
+  "name": "xpost",
+  "version": "1.0.0",
+  "description": "pull articles from an RSS feed, pull details from post page, create excerpt post and upload to wordpress",
+  "main": "main.js",
+  "scripts": {
+    "xpost": "node main.js"
+  },
+  "author": "l422y@l422y.com",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "dotenv": "^10.0.0",
+    "jsdom": "^17.0.0",
+    "li": "^1.3.0",
+    "superagent": "^6.1.0",
+    "wpapi": "^2.0.0-alpha.1",
+    "xml2js": "^0.4.23"
+  }
+}
